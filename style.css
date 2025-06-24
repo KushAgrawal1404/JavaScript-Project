@@ -81,7 +81,6 @@ header h1 i {
     background: #6a4190;
 }
 
-
 /* Recent Cities Dropdown */
 .recent-cities-dropdown {
     display: none; /* Initially hidden */
@@ -96,7 +95,6 @@ header h1 i {
     z-index: 1000; /* Ensure it appears above other elements */
     position: relative; /* Needed if search-box is also relative/static */
 }
-
 
 .recent-city-item {
     padding: 12px 20px;
@@ -179,4 +177,109 @@ header h1 i {
     font-size: 8rem;
     color: #ffd700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Forecast Container */
+.forecast-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+.forecast-container h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.forecast-card {
+    background: rgba(255, 255, 255, 0.85);
+    color: #222;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.forecast-card:hover {
+    transform: translateY(-8px);
+}
+.forecast-date {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+.forecast-icon i {
+    font-size: 3rem;
+    margin: 10px 0;
+    color: #ffcc00;
+}
+.forecast-temp {
+    font-size: 2rem;
+    color: #764ba2;
+    margin-bottom: 10px;
+}
+.forecast-description {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+}
+.forecast-details {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+/* Loading */
+.loading {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #764ba2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loading p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .current-weather {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+    .forecast-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+    }
+}
+@media (max-width: 380px) {
+    .forecast-grid {
+        grid-template-columns: 1fr;
+    }
+    .search-box button {
+        padding: 15px 10px;
+    }
 }
