@@ -117,3 +117,66 @@ header h1 i {
     background: #e9f0f7;
     color: #1d2b64;
 }
+
+/* Weather Container */
+.weather-container {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.current-weather {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    align-items: center;
+}
+.weather-info h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.temperature {
+    font-size: 4.2rem;
+    font-weight: 200;
+    color: #1d2b64;
+    margin-bottom: 10px;
+}
+.weather-description {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(230, 240, 255, 0.5);
+    border-left: 4px solid #667eea;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+.detail i {
+    color: #667eea;
+}
+
+/* Weather Icon */
+.weather-icon {
+    text-align: center;
+}
+.weather-icon i {
+    font-size: 8rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
