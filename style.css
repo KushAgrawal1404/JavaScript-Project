@@ -80,3 +80,40 @@ header h1 i {
 .search-box button:last-child:hover {
     background: #6a4190;
 }
+
+
+/* Recent Cities Dropdown */
+.recent-cities-dropdown {
+    display: none; /* Initially hidden */
+    max-width: 500px;
+    margin: 5px auto 0 auto; /* Align with search box */
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-height: 200px; /* Limit height and add scroll */
+    overflow-y: auto;
+    z-index: 1000; /* Ensure it appears above other elements */
+    position: relative; /* Needed if search-box is also relative/static */
+}
+
+
+.recent-city-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    color: #333;
+    font-size: 0.95rem;
+    display: flex; /* To allow space between city name and optional icon */
+    justify-content: space-between; /* To push close icon to right */
+    align-items: center;
+}
+
+.recent-city-item:last-child {
+    border-bottom: none;
+}
+
+.recent-city-item:hover {
+    background: #e9f0f7;
+    color: #1d2b64;
+}
