@@ -1,6 +1,6 @@
 class WeatherApp {
   constructor() {
-    this.apiKey = "53a902c6608e30c342cea72f6c231bac";
+    this.apiKey = "";
     this.baseUrl = "https://api.openweathermap.org/data/2.5";
     this.localStorageKey = "weatherAppRecentCities"; // Key for local storage
     this.maxRecentCities = 5; // Max number of recent cities to store
@@ -43,7 +43,7 @@ class WeatherApp {
       const isValid = /^[a-zA-Z\s]*$/.test(value);
       this.elements.searchBtn.disabled = value === "" || !isValid;
     });
-    // New: Event listeners for dropdown visibility
+    // Event listeners for dropdown visibility
     this.elements.locationInput.addEventListener("focus", () => this.showDropdown());
     this.elements.locationInput.addEventListener("blur", () => {
       // Delay hiding to allow clicks on dropdown items
