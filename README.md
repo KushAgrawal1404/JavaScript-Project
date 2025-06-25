@@ -1,5 +1,6 @@
 ## Setup Instructions
 
+## GitHub Link: https://github.com/KushAgrawal1404/JavaScript-Project
 ### 1. Get API Key
 To use this application, you need a free API key from OpenWeatherMap:
 
